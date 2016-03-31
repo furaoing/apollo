@@ -1,19 +1,14 @@
 /**
  * Created by roy on 2016/3/30.
  */
-package com.palamtree.tmp;
+package com.palmtree.tmp;
 
 public class transitionTable {
     public enum State {
-        height;
-
-    }
-
-        /*
         MyOK(true),
-    Initial( false ),
-    Final( true ),
-    Error( false );
+        Initial( false ),
+        Final( true ),
+        Error( false );
 
     static public final Integer length = 1 + Error.ordinal();
 
@@ -32,5 +27,4 @@ public class transitionTable {
         State.Final,    State.Initial,  State.Error
     }
 };
-*/
 }
