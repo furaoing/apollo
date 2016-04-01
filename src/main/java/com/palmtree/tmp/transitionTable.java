@@ -3,28 +3,22 @@
  */
 package com.palmtree.tmp;
 
-public class transitionTable {
-    public enum State {
-        MyOK(true),
-        Initial( false ),
-        Final( true ),
-        Error( false );
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    static public final Integer length = 1 + Error.ordinal();
+import com.google.gson.Gson;
 
-    final boolean accepting;
-
-    State( boolean accepting ) {
-        this.accepting = accepting;
-    }
-
+enum Stage {
+    Initial,
+    Normal,
+    Final
 }
-    State transition[][] = {
-    //  A               B               C
-    {
-        State.Initial,  State.Final,    State.Error
-    }, {
-        State.Final,    State.Initial,  State.Error
+
+public class transitionTable {
+
+    List<Map> table;
+    void insert(Map conds){
+        table.add(conds);
     }
-};
 }
