@@ -1,4 +1,4 @@
-package com.roy_scala.ml.d_cluster
+package com.apollo.ml.d_cluster
 import scala.collection.mutable.ListBuffer
 
 /**

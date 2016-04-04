@@ -1,4 +1,4 @@
-package com.roy_scala.util
+package com.apollo.util
 import scala.util.Random
 
 /**

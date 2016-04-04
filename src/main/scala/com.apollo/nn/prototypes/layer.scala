@@ -1,6 +1,6 @@
-package com.roy_scala.nn.prototypes
+package com.apollo.nn.prototypes
 import scala.collection.mutable.ListBuffer
-import com.roy_scala.ml.mil.vector_util
+import com.apollo.ml.mil.vector_util
 
 /**
  * Created by rao on 15-11-22.

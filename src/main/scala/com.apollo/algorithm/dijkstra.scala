@@ -1,4 +1,4 @@
-package com.roy_scala.algorithm
+package com.apollo.algorithm
 
 case class AdjacentVertex(_id:Int, _edge_len:Int) {
     val id = _id

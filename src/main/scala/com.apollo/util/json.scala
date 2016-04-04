@@ -1,6 +1,6 @@
-package com.roy_scala.util
+package com.apollo.util
 
-import com.roy_scala.util.IO.FileIO._
+import com.apollo.util.IO.FileIO._
 import scala.util.parsing.json.JSON
 
 /**

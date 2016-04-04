@@ -9,7 +9,7 @@
  * This source is subject to the LinrunSpace License. Please contact 上海林原信息科技有限公司 to get more information.
  * </copyright>
  */
-package com.roy_scala.nlp;
+package com.apollo.nlp;
 
 import java.util.List;
 import java.util.Map;

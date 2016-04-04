@@ -1,1 +1,39 @@
-{"a":"1"}
+{
+  "transitionTable": [
+    {
+      "stateId": 0,
+      "status": "initial",
+      "transitionCond": {
+        "b": 1, "a": 0, "!": 0
+      }
+    },
+    {
+      "stateId": 1,
+      "status": "normal",
+      "transitionCond": {
+        "b": 0, "a": 2, "!": 0
+      }
+    },
+    {
+      "stateId": 2,
+      "status": "normal",
+      "transitionCond": {
+        "b": 0, "a": 3, "!": 0
+      }
+    },
+    {
+      "stateId": 3,
+      "status": "normal",
+      "transitionCond": {
+        "b": 0, "a": 3, "!": 4
+      }
+    },
+    {
+      "stateId": 4,
+      "status": "final",
+      "transitionCond": {
+        "b": 0, "a": 0, "!": 0
+      }
+    }
+  ]
+}

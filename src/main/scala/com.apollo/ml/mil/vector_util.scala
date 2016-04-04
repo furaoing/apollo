@@ -1,4 +1,4 @@
-package com.roy_scala.ml.mil
+package com.apollo.ml.mil
 import scala.math
 /**
  * Created by roy on 2015/10/28.

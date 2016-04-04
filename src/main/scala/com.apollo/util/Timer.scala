@@ -1,4 +1,4 @@
-package com.roy_scala.util
+package com.apollo.util
 
 /**
  * Created by roy on 2015/11/19.

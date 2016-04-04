@@ -1,8 +1,8 @@
-package com.roy_scala.experiment;
-
 /**
  * Created by roy on 2016/3/30.
  */
+package com.apollo.examples;
+
 public class transitionTable {
     enum State {
         MyOK(true),

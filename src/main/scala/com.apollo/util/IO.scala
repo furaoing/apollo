@@ -1,4 +1,4 @@
-package com.roy_scala.util
+package com.apollo.util
 
 /**
  * Created by Roy on 22/10/2015.
@@ -6,7 +6,7 @@ package com.roy_scala.util
 
 import java.io._
 import scala.io.Source
-import com.roy_scala.util.mil.strip_all
+import com.apollo.util.mil.strip_all
 
 object IO {
   object FileIO {

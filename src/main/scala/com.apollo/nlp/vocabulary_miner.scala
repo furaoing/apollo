@@ -1,4 +1,4 @@
-package com.roy_scala.nlp
+package com.apollo.nlp
 
 import scala.collection.mutable.ListBuffer
 import scala.collection.mutable

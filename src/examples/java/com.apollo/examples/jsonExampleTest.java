@@ -1,14 +1,14 @@
-package com.apollo.test;
+package com.apollo.examples;
 
 import com.google.gson.Gson;
-import com.palmtree.common.io.FileIO;
+import com.apollo.common.io.FileIO;
 
 import java.util.Map;
 
 /**
  * Created by roy on 2016/3/30.
  */
-public class transitionTableTest {
+public class jsonExampleTest {
     public static void main(String[] args) {
         String json_str = "{\"a\": 1}";
         String path = "D:\\workspace\\palmtree\\src\\test\\resources\\bird.json";

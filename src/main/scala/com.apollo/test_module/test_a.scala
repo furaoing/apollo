@@ -1,4 +1,4 @@
-package com.roy_scala.test_module
+package com.apollo.test_module
 
 /**
  * Created by roy on 2015/12/18.

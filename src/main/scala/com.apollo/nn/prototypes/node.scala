@@ -1,6 +1,6 @@
-package com.roy_scala.nn.prototypes
-import com.roy_scala.ml.mil.vector_util
-import com.roy_scala.math.mil
+package com.apollo.nn.prototypes
+import com.apollo.ml.mil.vector_util
+import com.apollo.math.mil
 /**
  * Created by rao on 15-11-22.
  */

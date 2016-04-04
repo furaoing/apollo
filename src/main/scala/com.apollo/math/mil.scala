@@ -1,6 +1,6 @@
-package com.roy_scala.math
+package com.apollo.math
 import scala.math
-import com.roy_scala.ml.mil.vector_util
+import com.apollo.ml.mil.vector_util
 /**
  * Created by roy on 2015/11/23.
  */ 
