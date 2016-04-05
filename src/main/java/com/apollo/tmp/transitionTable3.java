@@ -12,13 +12,13 @@ import java.util.Map;
 public class transitionTable3 {
 
     public static class State {
-        private int stateId;
-        private String status;
-        private Map<String, Integer> transitionCond;
+        public int stateId;
+        public String status;
+        public Map<String, Integer> transitionCond;
     }
 
     public static class Container{
-      private List<State> transitionTable;
+      public List<State> transitionTable;
    }
 
     public static Container load() {
