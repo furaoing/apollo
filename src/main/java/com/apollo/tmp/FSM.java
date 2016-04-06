@@ -18,17 +18,31 @@ public class FSM {
         return c == transition_table.get(0).transitionCond.get("b");
     }
 
-    public boolean recog(String text){
-        char[] t_chars = text.toCharArray();
-        for (int i = 0; i < t_chars.length; i++){
-            if (identify_init(t_chars[i])) {
+    public boolean d_recog(String text){
+        index = 0;
+        current_state = 0;
 
+        for (int i = 0; i < text.length(); i++){
+            char c = text.charAt(i);
+            if (i == text.length() - 1){
+                return current_state == 4;
+            }
+            else if (!can_switch(c, current_state)) {
+                return false;
+            }
+            else {
+                current_state = state_switch(c, current_state);
+                index += 1;
             }
         }
         return true;
     }
 
-    private boolean d_recog(char c) {
+    private int state_switch(char c, int state) {
+        return 2;
+    }
 
+    private boolean can_switch(char c, int state) {
+        return true;
     }
 }
