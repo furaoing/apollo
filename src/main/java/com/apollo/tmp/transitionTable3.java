@@ -22,7 +22,7 @@ public class transitionTable3 {
    }
 
     public static Container load() {
-        String path = "/home/rao/apollo/src/test/resources/bird.json";
+        String path = "D:\\workspace\\apollo\\src\\test\\resources\\bird.json";
         String json_str = FileIO.f_read(path);
         Gson gson = new Gson();
         Container c = gson.fromJson(json_str, Container.class);

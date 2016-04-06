@@ -3,16 +3,25 @@ package com.apollo.tmp;
 import com.apollo.tmp.transitionTable3.State;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by rao on 16-4-3.
  */
+
 public class FSM {
-    public static List<State> transition_table;
+    private static List<State> transition_table;
 
     private int index;
 
     private int current_state;
+
+    public FSM(List<State> _transition_table){
+        transition_table = _transition_table;
+        index = 0;
+        current_state = 0;
+    }
 
     private boolean identify_init(char c){
         return c == transition_table.get(0).transitionCond.get("b");
@@ -21,28 +30,32 @@ public class FSM {
     public boolean d_recog(String text){
         index = 0;
         current_state = 0;
+        String single_char_s;
 
-        for (int i = 0; i < text.length(); i++){
-            char c = text.charAt(i);
-            if (i == text.length() - 1){
+        while (true) {
+            if (index == text.length()){
                 return current_state == 4;
             }
-            else if (!can_switch(c, current_state)) {
+            single_char_s = Character.toString(text.charAt(index));
+
+            if (!can_switch(single_char_s, current_state)) {
                 return false;
             }
             else {
-                current_state = state_switch(c, current_state);
+                current_state = state_switch(single_char_s, current_state);
                 index += 1;
             }
         }
-        return true;
     }
 
-    private int state_switch(char c, int state) {
-        return 2;
+    private int state_switch(String single_char_s, int state) {
+        Map cond = transition_table.get(state).transitionCond;
+        int state_id = (int) cond.get(single_char_s);
+        return state_id;
     }
 
-    private boolean can_switch(char c, int state) {
-        return true;
+    private boolean can_switch(String single_char_s, int state) {
+        Set tran_chars = transition_table.get(state).transitionCond.keySet();
+        return tran_chars.contains(single_char_s);
     }
 }
