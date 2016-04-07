@@ -23,13 +23,11 @@ public class FSM {
         current_state = 0;
     }
 
-    private boolean identify_init(char c){
-        return c == transition_table.get(0).transitionCond.get("b");
-    }
-
     public boolean d_recog(String text){
         index = 0;
         current_state = 0;
+        // set initial current_state to be 0 so that the first char of text will be
+        // tested for start state af the beginning
         String single_char_s;
 
         while (true) {
