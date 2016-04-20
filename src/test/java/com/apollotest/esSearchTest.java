@@ -1,6 +1,7 @@
 package com.apollotest;
 
 import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
@@ -19,12 +20,25 @@ public class esSearchTest {
         Client client = new TransportClient()
         .addTransportAddress(new InetSocketTransportAddress("192.168.1.119", 9300));
 
+        String json = "{" +
+        "\"user\":\"kimchy\"," +
+        "\"postDate\":\"2014-01-30\"," +
+        "\"message\":\"trying1 out Elasticsearch\"" +
+    "}";
 
-        GetResponse response = client.prepareGet("twitter", "tweet", "1")
+        IndexResponse response = client.prepareIndex("twitter", "tweet", "2")
+                .setSource(json)
                 .execute()
                 .actionGet();
 
-        System.out.println(response.getSource());
+
+        /*
+        GetResponse response = client.prepareGet("twitter", "tweet", "1")
+                .execute()
+                .actionGet();
+                */
+
+        //System.out.println(response.getSource());
 
     }
 }

@@ -9,7 +9,9 @@ import com.apollo.common.utils.propertyHandler;
  */
 public class readPropertyTest {
     public static void main(String[] args) {
-        String text = propertyHandler.read("LinuxRoot");
+        String a = "apollo.properties";
+        propertyHandler.loadProperties(a);
+        String text = propertyHandler.readProperty("LinuxRoot");
         if (text != null) {
             System.out.println(text);
         }
