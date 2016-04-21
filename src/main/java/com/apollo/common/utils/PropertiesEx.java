@@ -19,7 +19,6 @@ public class PropertiesEx extends Properties {
 
         while(in.hasNext()) {
             out.write(in.nextLine().replace("\\","\\\\").getBytes());
-            out.write("\n".getBytes());
         }
 
         InputStream is = new ByteArrayInputStream(out.toByteArray());
