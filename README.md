@@ -1,0 +1,1 @@
+Apollo is a java library which provides common utilities as a complementary to java standard library
