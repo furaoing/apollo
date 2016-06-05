@@ -25,7 +25,8 @@ object GenerateComb {
     code
   }
 
-  def helper(depth:Int, bank:List[List[Int]]):List[List[Int]] = {
+  def helper(depth:Int,
+             bank:List[List[Int]]):List[List[Int]] = {
     if (depth==0){
       val tmp = bank.apply(depth)
       var ax:List[List[Int]] = List()
