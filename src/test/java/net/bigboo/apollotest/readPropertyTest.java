@@ -1,6 +1,6 @@
 package net.bigboo.apollotest;
 
-import net.bigboo.apollo.common.utils.propertyHandler;
+import net.bigboo.apollo.common.utils.PropertyUtils;
 
 /**
  * Created by rao on 16-4-6.
@@ -9,8 +9,8 @@ import net.bigboo.apollo.common.utils.propertyHandler;
 public class readPropertyTest {
     public static void main(String[] args) {
         String a = "regex.properties";
-        propertyHandler.loadPropertiesEx(a);
-        String text = propertyHandler.readPropertyEx("test");
+        PropertyUtils.loadPropertiesEx(a);
+        String text = PropertyUtils.readPropertyEx("test");
         if (text != null) {
             System.out.println(text);
         }
