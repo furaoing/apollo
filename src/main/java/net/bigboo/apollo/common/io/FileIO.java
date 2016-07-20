@@ -34,6 +34,7 @@ public class FileIO {
         }
     }
 
+    /* write string to file named "file" in CWD */
     public static int f_write(String file, String content){
         try {
             File fileDir = new File(file);

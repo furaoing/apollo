@@ -58,6 +58,39 @@ public class PropertyUtils {
         }
     }
 
+    public static Optional<Integer> parseInt(Properties properties, String key) {
+        Optional<String> valueOptional = readProperty(properties, key);
+        if(valueOptional.isPresent()) {
+            String value = valueOptional.get();
+            return Optional.of(Integer.parseInt(value));
+        }
+        else{
+            return Optional.empty();
+        }
+    }
+
+    public static Optional<String> parseString(Properties properties, String key) {
+        Optional<String> valueOptional = readProperty(properties, key);
+        if(valueOptional.isPresent()) {
+            String value = valueOptional.get();
+            return Optional.of(value);
+        }
+        else{
+            return Optional.empty();
+        }
+    }
+
+    public static Optional<Double> parseDouble(Properties properties, String key) {
+        Optional<String> valueOptional = readProperty(properties, key);
+        if(valueOptional.isPresent()) {
+            String value = valueOptional.get();
+            return Optional.of(Double.parseDouble(value));
+        }
+        else{
+            return Optional.empty();
+        }
+    }
+
     // TODO: LoadPropertiesEx bug, can not support utf-8, fail to replace backslash
     public static boolean loadPropertiesEx(String propertyFileName) {
         pEx = new PropertiesEx();
