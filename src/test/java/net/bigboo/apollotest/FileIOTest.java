@@ -7,7 +7,7 @@ import net.bigboo.apollo.common.io.FileIO;
  */
 public class FileIOTest {
     public static void main(String[] args) {
-        String tmp = "aabbcc";
+        String tmp = "ccc";
         FileIO.f_write("tstFile.txt", tmp);
     }
 }

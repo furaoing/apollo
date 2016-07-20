@@ -1,6 +1,9 @@
 package net.bigboo.apollo.common.utils;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.Optional;
 import java.util.Properties;
 
@@ -55,6 +58,26 @@ public class PropertyUtils {
                 System.out.println("No property key");
                 return Optional.empty();
             }
+        }
+    }
+
+    public static Optional<String> readPropertyAsText(String propertyFileName) {
+        try {
+            Reader reader = new InputStreamReader(Thread.currentThread().
+                    getContextClassLoader().
+                    getResourceAsStream(propertyFileName), "UTF-8");
+            BufferedReader br = new BufferedReader(reader);
+            String text = "";
+            String text_buffer;
+            while ((text_buffer = br.readLine()) != null) {
+                text = text + text_buffer + "\n";
+            }
+            br.close();
+            return Optional.of(text);
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("No property file");
+            return Optional.empty();
         }
     }
 
