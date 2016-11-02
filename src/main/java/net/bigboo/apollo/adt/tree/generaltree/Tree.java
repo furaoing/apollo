@@ -237,4 +237,21 @@ public class Tree<T> {
 
         return newList;
     }
+
+    public ArrayList<Node<T>> getLeaves() {
+        ArrayList<Node<T>> leaves = new ArrayList<Node<T>>();
+        getLeavesHelper(this.root, leaves);
+        return leaves;
+    }
+
+    private void getLeavesHelper(Node<T> node, ArrayList<Node<T>> leaves) {
+        if (node.isLeaf()) {
+            leaves.add(node);
+        }
+        else {
+            for (Node<T> n: node.getChildren()) {
+                getLeavesHelper(n, leaves);
+            }
+        }
+    }
 }

@@ -112,6 +112,10 @@ public class Node<T> {
         return list.remove(childToBeDeleted);
     }
 
+    public boolean isLeaf() {
+        return this.getChildren().size() == 0;
+    }
+
     public T getData() {
         return this.data;
     }
